@@ -1,0 +1,20 @@
+body
+{
+    height:100%;
+    width:100%;
+}
+
+#registration_form
+{
+    margin-top:70%;
+}
+
+#footer
+{
+    padding-left:1%;
+}
+
+#registration_error, #registration_success
+{
+    margin-top:2%;
+}
