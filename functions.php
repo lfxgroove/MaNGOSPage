@@ -1,5 +1,10 @@
 ﻿<?php
 
+function error_message($msg)
+{
+    return '<div class="alert alert-danger">'.$msg.'</div>';
+}
+
 function add_account()
 {
 	include("mysql.php");

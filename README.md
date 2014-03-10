@@ -3,7 +3,13 @@ MaNGOSPage
 
 MaNGOSPage is an account registration page for World of Warcraft servers which use MaNGOS. It's written in PHP, HTML and CSS. Furthermore it's using Bootstrap 3.
 
-Current version: 1.0.0
+Current version: 1.0.1
+
+Installation
+============
+
+To install MaNGOSPage just edit *mysql.php* and fill in your information and put
+it on your webserver.
 
 License
 ==========

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -21,6 +21,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-4">
+                <?php
+                include "functions.php";
+                include "mysql.php";
+                ?>
                 <form id="registration_form" name="registration" action="index.php" method="POST">
                     Username:
                     <input class="form-control" type="text" name="username" maxlength="32" required> <br>
@@ -52,14 +56,12 @@
                                     {
                                         if (strlen($_POST["username"]) <=32 && strlen($_POST["password"]) <=32)
                                         {
-                                            include "mysql.php";
                                             $sql = "SELECT * FROM `account` WHERE `username` = '{$_POST["username"]}'";
                                             $res = $connection->query($sql);
                                             $numrows = $res->num_rows;
 
                                             if ($numrows === 0)
                                             {
-                                                include "functions.php";
                                                 add_account();
                                                 echo "<div id=\"registration_success\" class=\"alert alert-success\">Your account has been created!</div>\n";
                                             }
